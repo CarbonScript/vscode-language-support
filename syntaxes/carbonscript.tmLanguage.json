@@ -1,0 +1,48 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "carbonscript",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#double_quoted_strings"
+    },
+    {
+      "include": "#single_quoted_strings"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.carbonscript",
+          "match": "\\b(if|while|for|return)\\b"
+        }
+      ]
+    },
+    "double_quoted_strings": {
+      "name": "string.quoted.double.carbonscript",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.carbonscript",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "single_quoted_strings": {
+      "name": "string.quoted.single",
+      "begin": "\\'",
+      "end": "\\'",
+      "patterns": [
+        {
+          "name": "constant.character.escape.carbonscript",
+          "match": "\\\\."
+        }
+      ]
+    }
+  },
+  "scopeName": "source.carbonscript"
+}

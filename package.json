@@ -1,0 +1,25 @@
+{
+    "name": "carbonscript-support",
+    "displayName": "carbonscript-support",
+    "description": "The Carbon Script language-support for Microsoft Visual Studio Code.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.69.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "carbonscript",
+            "aliases": ["carbonscript", "carbonscript"],
+            "extensions": ["cs"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "carbonscript",
+            "scopeName": "source.carbonscript",
+            "path": "./syntaxes/carbonscript.tmLanguage.json"
+        }]
+    }
+}
