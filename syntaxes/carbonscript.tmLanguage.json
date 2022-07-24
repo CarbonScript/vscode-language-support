@@ -5,11 +5,17 @@
     {
       "include": "#keywords"
     },
+	{
+		"include": "#comment"
+	},
     {
       "include": "#double_quoted_strings"
     },
     {
       "include": "#single_quoted_strings"
+    },
+    {
+      "include": "#data_type"
     }
   ],
   "repository": {
@@ -17,7 +23,23 @@
       "patterns": [
         {
           "name": "keyword.control.carbonscript",
-          "match": "\\b(if|while|for|return)\\b"
+          "match": "\\b(if|switch|do|while|for|goto|break|return|set|const)\\b"
+        }
+      ]
+    },
+    "comment": {
+      "patterns": [
+        {
+          "name": "comment.line",
+          "match": "#\\$"
+        }
+      ]
+    },
+    "data_type": {
+      "patterns": [
+        {
+          "name": "entity.name.type",
+          "match": "\\b(boolean|number|string|null)\\b"
         }
       ]
     },
